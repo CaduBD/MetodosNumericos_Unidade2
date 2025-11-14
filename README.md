@@ -1,4 +1,4 @@
-Markdown# 🧮 Projeto de Cálculo Numérico - Unidade 2
+🧮 Projeto de Cálculo Numérico - Unidade 2
 
 Este repositório contém uma aplicação em Python desenvolvida para a disciplina de Cálculo Numérico. O software funciona como uma calculadora de métodos numéricos via linha de comando (CLI), focada na resolução de Sistemas Lineares, Ajuste de Curvas e Integração Numérica.
 
@@ -46,11 +46,24 @@ Abra o terminal e execute:
 
 ```bash
 pip install numpy sympy
-🛠️ Como ExecutarClone este repositório:Bashgit clone [https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git](https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git)
-Acesse a pasta do projeto:Bashcd NOME-DO-REPOSITORIO
-Execute o script principal:Bashpython Projeto_Unidade2.py
-📖 Guia de Uso RápidoAo iniciar o programa, escolha uma das opções do menu:Opção 1 e 2 (Sistemas Lineares)Digite a matriz linha por linha, separando os números por espaço.Exemplo: Para uma matriz $2 \times 2$:Plaintext2 1
-1 4
-Opção 3 (Mínimos Quadrados)Digite todos os valores de $X$ em uma linha e todos os valores de $Y$ na próxima.Exemplo:PlaintextX: 0 1.5 2.6 4.2
-Y: 18 13 11 9
-Opção 4 (Integração)Modo Função: Digite usando sintaxe Python (ex: exp(x), sin(x), x**3).Modo Tabela: Insira os valores de $X$ e $Y$. O programa detecta o espaçamento ($h$) automaticamente.
+
+🛠️ Como Executar
+Execute o script principal:python Projeto_Unidade2.py
+
+📖 Guia de Uso Rápido
+Ao iniciar o programa, escolha uma das opções do menu: 
+Opção 1 e 2 (Sistemas Lineares)
+   Digite a matriz linha por linha, separando os números por espaço. Exemplo: Para uma matriz de dimensão 2 -->
+   linha1: 1 2
+   linha 2: 4 3
+   Após isso, o programa irá pedir o vetor b, digite os resultados da matriz. Exemplo: 
+   vetor b: 5 6
+Opção 3 (Mínimos Quadrados)
+   Digite todos os valores de X em uma linha e todos os valores de Y na próxima. Exemplo: 
+   X: 0 1.5 2.6 4.2
+   Y: 18 13 11 9
+   Após isso, escolhe o modelo.
+Opção 4 (Integração)
+   Modo Função: Digite usando sintaxe Python (ex: exp(x), sin(x), x**3).
+   Modo Tabela: Insira os valores de X e Y. 
+   O programa detecta o passo (h) automaticamente.

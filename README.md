@@ -42,6 +42,64 @@ Certifique-se de ter o Python instalado. Em seguida, instale as dependências:
 
 ```bash
 pip install customtkinter numpy sympy matplotlib
+
+🚀 Como Executar
+1. Clone este repositório:
+   git clone https://github.com/CaduBD/MetodosNumericos_Unidade2.git
+2. Acesse a pasta do projeto:
+   cd NOME-DO-REPOSITORIO
+3. Execute o arquivo principal: 
+   python Projeto_Unidade2.py
+Com certeza! Aqui está o README.md atualizado e pronto para uso, com os nomes da equipe corretamente listados na seção de autores.
+
+Basta copiar o conteúdo abaixo e substituir o que está no seu arquivo README.md no GitHub.
+
+Markdown
+
+# 🖥️ Calculadora de Métodos Numéricos (GUI)
+
+Este repositório contém uma aplicação desktop desenvolvida em Python para a disciplina de Cálculo Numérico. O software oferece uma interface gráfica moderna (baseada em `customtkinter`) para resolver problemas complexos de engenharia e matemática.
+
+## ✨ Funcionalidades
+
+A aplicação é dividida em três módulos principais:
+
+### 1. 🧮 Sistemas Lineares
+Resolução de sistemas do tipo $Ax = b$.
+* **Método Direto:** Eliminação de Gauss Simples.
+* **Método Iterativo:** Gauss-Seidel.
+    * *Recursos:* Detecção automática de matriz diagonal dominante, configuração de tolerância ($\epsilon$) e número máximo de iterações.
+    * *Entrada:* Matrizes inseridas via caixa de texto (copiar e colar facilitado).
+
+### 2. 📈 Mínimos Quadrados (Ajuste de Curvas)
+Encontra a melhor curva que se ajusta a um conjunto de dados experimentais.
+* **Modelos Suportados:**
+    * Reta ($y = ax + b$)
+    * Parábola ($y = ax^2 + bx + c$)
+    * Exponencial ($y = a \cdot e^{bx}$)
+* **Visualização:** Gera um **gráfico interativo** (matplotlib) mostrando os pontos dados e a curva ajustada.
+* **Métrica:** Exibe a equação final e o Erro Quadrático Total.
+
+### 3. ∫ Integração Numérica
+Calcula integrais definidas usando métodos repetidos.
+* **Métodos:**
+    * Regra do Trapézio Repetida.
+    * Regra de Simpson 1/3 Repetida.
+* **Modos de Entrada Flexíveis:**
+    1.  **Por Função:** Digite a expressão (ex: `x**2 + sin(x)`) e os limites.
+    2.  **Por Tabela:** Insira listas de pontos $X$ e $Y$ (ideal para dados de campo, como larguras de rios).
+
+---
+
+## 📦 Dependências e Instalação
+
+Este projeto utiliza bibliotecas externas para a interface gráfica, cálculos matemáticos e plotagem.
+
+### Pré-requisitos
+Certifique-se de ter o Python instalado. Em seguida, instale as dependências:
+
+```bash
+pip install customtkinter numpy sympy matplotlib
 customtkinter: Para a interface gráfica moderna.
 
 numpy: Para operações matriciais e vetoriais.

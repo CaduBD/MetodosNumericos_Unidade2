@@ -100,4 +100,4 @@ Projeto desenvolvido pela equipe:
 
    Raimundo Ferreira do Nascimento Junior
 
-Nota: Projeto desenvolvido para a Unidade 2 da disciplina de Cálculo Numérico (2025.2).
+# Nota: Projeto desenvolvido para a Unidade 2 da disciplina de Cálculo Numérico (2025.2).

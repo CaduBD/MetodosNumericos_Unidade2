@@ -26,7 +26,7 @@ def eliminacao_gauss(A, b):
     except:
         return None
 
-# Ajustado: tol=1e-6 e max_iter=160
+
 def gauss_seidel(A, b, x0=None, tol=1e-6, max_iter=160):
     n = len(b)
     x = np.zeros(n) if x0 is None else x0
@@ -143,8 +143,7 @@ class App(ctk.CTk):
         # Tabview
         self.tabview = ctk.CTkTabview(self)
         self.tabview.grid(row=0, column=0, padx=20, pady=20, sticky="nsew")
-        self.tabview._segmented_button.configure(font=self.font_btn, height=50) # Abas maiores
-        
+        self.tabview._segmented_button.configure(font=self.font_btn, height=50) 
         self.tab_sis = self.tabview.add("Sistemas Lineares")
         self.tab_mmq = self.tabview.add("Mínimos Quadrados")
         self.tab_int = self.tabview.add("Integração")
@@ -267,8 +266,8 @@ class App(ctk.CTk):
             x_line = np.linspace(x_min - margin, x_max + margin, 100)
             y_line = func_plot(x_line)
 
-            ax.plot(x_raw, y_raw, 'ro', label='Dados', markersize=8) # Pontos maiores
-            ax.plot(x_line, y_line, 'c-', linewidth=3, label='Ajuste') # Linha mais grossa
+            ax.plot(x_raw, y_raw, 'ro', label='Dados', markersize=8) 
+            ax.plot(x_line, y_line, 'c-', linewidth=3, label='Ajuste') 
             
             ax.set_title(f"Ajuste: {self.combo_mmq.get()}", color='white', fontsize=16, weight='bold')
             ax.legend(facecolor='#333333', edgecolor='white', labelcolor='white', fontsize=12)

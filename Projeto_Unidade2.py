@@ -108,13 +108,27 @@ def integrar_numerico(modo, dados, expr="", a=0, b=0, n=0):
         y_vals = dados['y']
         h = dados['h']
 
+    # TRAPÉZIO REPETIDO
+    # y_vals[0]    -> Primeiro ponto (y0)
+    # y_vals[-1]   -> Último ponto (yn)
+    # y_vals[1:-1] -> Todos os pontos DO MEIO (exclui o primeiro e o último)
     soma_t = y_vals[0] + y_vals[-1] + 2 * np.sum(y_vals[1:-1])
     res_trap = (h / 2) * soma_t
 
     res_simp = None
-    if (len(y_vals) - 1) % 2 == 0:
-        soma_s = y_vals[0] + y_vals[-1] + 4 * np.sum(y_vals[1:-1:2]) + 2 * np.sum(y_vals[2:-1:2])
-        res_simp = (h / 3) * soma_s
+
+    # SIMPSON
+    if (len(y_vals) - 1) % 2 == 0: # Verificação de Paridade
+        soma_s = y_vals[0] + y_vals[-1] + 4 * np.sum(y_vals[1:-1:2]) + 2 * np.sum(y_vals[2:-1:2]) 
+        # Soma das pontas (peso 1) - y_vals[0] + y_vals[-1]
+
+        # Soma dos índices ímpares (peso 4) -> Pula de 2 em 2 começando do 1
+        # y_vals[1:-1:2] pega os índices 1, 3, 5, 7...
+
+        # Soma dos índices pares (peso 2) -> Pula de 2 em 2 começando do 2
+        # y_vals[2:-1:2] pega os índices 2, 4, 6, 8...
+
+        res_simp = (h / 3) * soma_s # Multiplica soma pelo passo
     
     return res_trap, res_simp, None
 
